@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>ROAM Co. | Coming Soon</title>
 
   <style>
@@ -22,21 +21,33 @@
       align-items: center;
     }
 
+    .coming-soon {
+      text-align: center;
+      width: 100%;
+    }
+
     .logo {
       width: min(90vw, 900px);
       height: auto;
       display: block;
+      margin: 0 auto;
+    }
+
+    .coming-soon p {
+      margin-top: 30px;
+      color: #d6aa4c;
+      font-family: Arial, sans-serif;
+      font-size: clamp(16px, 2.5vw, 26px);
+      letter-spacing: 12px;
+      padding-left: 12px;
     }
   </style>
 </head>
 
 <body>
-
-  <img
-    class="logo"
-    src="IMG_5076.png"
-    alt="ROAM Co. Coming Soon"
-  >
-
+  <div class="coming-soon">
+    <img class="logo" src="IMG_5076.png" alt="ROAM Co.">
+    <p>COMING SOON</p>
+  </div>
 </body>
 </html>
