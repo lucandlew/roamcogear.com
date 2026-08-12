@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>ROAM Co. | Coming Soon</title>
+
+  <meta name="description" content="ROAM Co. — Made to Roam">
 
   <style>
     * {
@@ -12,24 +16,31 @@
       box-sizing: border-box;
     }
 
+    html,
     body {
       width: 100%;
-      min-height: 100vh;
+      height: 100%;
       background: #000;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .coming-soon {
-      text-align: center;
       width: 100%;
+      text-align: center;
+      transform: translateY(-100px);
     }
 
     .logo {
+      display: block;
       width: min(90vw, 900px);
       height: auto;
-      display: block;
       margin: 0 auto;
     }
 
@@ -45,9 +56,18 @@
 </head>
 
 <body>
+
   <div class="coming-soon">
-    <img class="logo" src="IMG_5076.png" alt="ROAM Co.">
+
+    <img
+      class="logo"
+      src="IMG_5076.png"
+      alt="ROAM Co."
+    >
+
     <p>COMING SOON</p>
+
   </div>
+
 </body>
 </html>
