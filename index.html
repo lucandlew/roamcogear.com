@@ -23,61 +23,53 @@
       box-sizing: border-box;
     }
 
-    html {
-      background: #000;
-    }
-
+    html,
     body {
       background: #000;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
       min-height: 100vh;
     }
 
-    /* TOP SECTION */
-
     .hero {
       width: 100%;
-      min-height: 55vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 70px 20px 55px;
+      padding: 55px 20px 45px;
     }
 
     .logo {
-      width: min(500px, 82vw);
+      width: min(560px, 82vw);
       height: auto;
       display: block;
-      object-fit: contain;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .coming-soon {
-      font-size: clamp(24px, 5vw, 44px);
+      font-size: clamp(26px, 5vw, 42px);
       font-weight: 700;
       letter-spacing: 10px;
       text-transform: uppercase;
     }
 
-    /* PRODUCT GRID */
-
     .products {
-      width: min(1250px, 94%);
+      width: min(1100px, 94%);
       margin: 0 auto;
-      padding: 20px 0 100px;
-
+      padding: 10px 0 80px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 22px;
     }
 
     .product {
       width: 100%;
-      aspect-ratio: 1 / 1;
-      background: #080808;
+      background: #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -86,47 +78,43 @@
 
     .product img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      height: auto;
       display: block;
+      object-fit: contain;
     }
 
-    /* TABLET */
-
-    @media (max-width: 900px) {
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-      }
-
+    @media (max-width: 700px) {
       .hero {
-        min-height: 48vh;
-      }
-    }
-
-    /* PHONE */
-
-    @media (max-width: 520px) {
-      .hero {
-        min-height: 42vh;
-        padding: 50px 15px 40px;
+        padding: 38px 18px 34px;
       }
 
       .logo {
-        width: 82vw;
-        margin-bottom: 24px;
+        width: 86vw;
+        margin-bottom: 22px;
       }
 
       .coming-soon {
-        font-size: 25px;
+        font-size: 28px;
         letter-spacing: 7px;
       }
 
       .products {
-        width: 96%;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        padding-bottom: 60px;
+        width: 100%;
+        display: block;
+        padding: 0 0 55px;
+      }
+
+      .product {
+        width: 100%;
+        margin: 0 0 18px;
+        padding: 0 12px;
+      }
+
+      .product img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
       }
     }
   </style>
@@ -134,8 +122,6 @@
 </head>
 
 <body>
-
-  <!-- ROAM LOGO / COMING SOON -->
 
   <section class="hero">
     <img
@@ -149,86 +135,50 @@
     </div>
   </section>
 
-
-  <!-- PRODUCTS -->
-
   <section class="products">
 
     <div class="product">
-      <img
-        src="IMG_5213.jpeg"
-        alt="ROAM Co. product"
-      >
+      <img src="IMG_5213.jpeg" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="IMG_5214.png"
-        alt="ROAM Co. product"
-      >
+      <img src="IMG_5214.png" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="IMG_5215.png"
-        alt="ROAM Co. product"
-      >
+      <img src="IMG_5215.png" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="IMG_5216.png"
-        alt="ROAM Co. product"
-      >
+      <img src="IMG_5216.png" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="068E0137-1D3C-4CD9-BDE9-DC3684E110B1.png"
-        alt="ROAM Co. product"
-      >
+      <img src="068E0137-1D3C-4CD9-BDE9-DC3684E110B1.png" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="33EEDDEB-FBA2-4636-9580-566C57707885.jpeg"
-        alt="ROAM Co. product"
-      >
+      <img src="33EEDDEB-FBA2-4636-9580-566C57707885.jpeg" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="6FE4223F-76B1-475B-9081-505D08A5507B.png"
-        alt="ROAM Co. product"
-      >
+      <img src="6FE4223F-76B1-475B-9081-505D08A5507B.png" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="78C88BE9-FDF3-4576-9C0F-B4BAAE52B465.png"
-        alt="ROAM Co. product"
-      >
+      <img src="78C88BE9-FDF3-4576-9C0F-B4BAAE52B465.png" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="9236C828-7B5E-4DB8-8E5C-C72C1357CC5C.png"
-        alt="ROAM Co. product"
-      >
+      <img src="9236C828-7B5E-4DB8-8E5C-C72C1357CC5C.png" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="BDDD0CE5-3C6F-4F0D-9A8D-901DD5D689CC.jpeg"
-        alt="ROAM Co. product"
-      >
+      <img src="BDDD0CE5-3C6F-4F0D-9A8D-901DD5D689CC.jpeg" alt="ROAM Co. product">
     </div>
 
     <div class="product">
-      <img
-        src="FC47C8C6-7260-4357-B3AB-81639DE1E0C9.png"
-        alt="ROAM Co. product"
-      >
+      <img src="FC47C8C6-7260-4357-B3AB-81639DE1E0C9.png" alt="ROAM Co. product">
     </div>
 
   </section>
