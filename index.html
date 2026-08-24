@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <!-- Google Analytics -->
@@ -18,7 +17,6 @@
   <title>ROAM Co. | Coming Soon</title>
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -38,7 +36,6 @@
       overflow-x: hidden;
     }
 
-
     /* =========================
        HEADER
        ========================= */
@@ -46,47 +43,30 @@
     .hero {
       width: 100%;
       text-align: center;
-      padding: 42px 16px 28px;
+      padding: 38px 15px 20px;
     }
 
-    .logo-crop {
-      width: min(700px, 92vw);
-      height: 170px;
-      margin: 0 auto;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .logo-crop img {
-      position: absolute;
-      width: 100%;
-      height: auto;
-
-      left: 50%;
-      top: 50%;
-
-      transform:
-        translate(-50%, -50%)
-        scale(1.03);
-
+    .logo {
       display: block;
+      width: min(680px, 92vw);
+      height: auto;
+      margin: 0 auto;
     }
 
     .coming-soon {
       margin-top: 8px;
 
-      color: #d1a44b;
+      color: #d2a34b;
 
-      font-size: clamp(18px, 4.5vw, 30px);
+      font-size: clamp(18px, 4.5vw, 29px);
       font-weight: 400;
 
-      letter-spacing: 12px;
+      letter-spacing: 10px;
       line-height: 1;
 
       text-transform: uppercase;
       white-space: nowrap;
     }
-
 
     /* =========================
        PRODUCTS
@@ -97,9 +77,9 @@
       margin: 0 auto;
 
       padding:
-        24px
+        22px
         12px
-        60px;
+        55px;
 
       display: flex;
       flex-direction: column;
@@ -114,11 +94,10 @@
     }
 
     .product img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
     }
-
 
     /* =========================
        PHONE
@@ -128,20 +107,13 @@
 
       .hero {
         padding:
-          28px
+          24px
           12px
-          22px;
+          16px;
       }
 
-      .logo-crop {
-        width: 94vw;
-        height: 125px;
-      }
-
-      .logo-crop img {
-        transform:
-          translate(-50%, -50%)
-          scale(1.02);
+      .logo {
+        width: 92vw;
       }
 
       .coming-soon {
@@ -152,12 +124,15 @@
       }
 
       .products {
-        padding-top: 18px;
+        padding:
+          14px
+          10px
+          45px;
+
         gap: 8px;
       }
 
     }
-
 
     /* =========================
        DESKTOP
@@ -165,17 +140,19 @@
 
     @media (min-width: 900px) {
 
-      .logo-crop {
-        height: 190px;
+      .hero {
+        padding-top: 45px;
       }
 
       .products {
         width: min(1150px, 94%);
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
 
-        gap: 16px;
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        gap: 14px;
       }
 
     }
@@ -184,24 +161,17 @@
 
 </head>
 
-
 <body>
 
-
-  <!-- =========================
-       ROAM CO LOGO
-       ========================= -->
+  <!-- HEADER -->
 
   <header class="hero">
 
-    <div class="logo-crop">
-
-      <img
-        src="IMG_5076.png"
-        alt="ROAM Co."
-      >
-
-    </div>
+    <img
+      class="logo"
+      src="IMG_5076.jpeg"
+      alt="ROAM Co."
+    >
 
     <div class="coming-soon">
       Coming Soon
@@ -210,12 +180,9 @@
   </header>
 
 
-  <!-- =========================
-       PRODUCTS
-       ========================= -->
+  <!-- PRODUCTS -->
 
-  <main class="products">
-
+  <main class="products" id="products">
 
     <div class="product">
       <img
@@ -224,14 +191,12 @@
       >
     </div>
 
-
     <div class="product">
       <img
         src="IMG_5214.jpeg"
         alt="ROAM Co. product"
       >
     </div>
-
 
     <div class="product">
       <img
@@ -240,14 +205,12 @@
       >
     </div>
 
-
     <div class="product">
       <img
         src="068E0137-1D3C-4CD9-BDE9-DC3684E110B1.png"
         alt="ROAM Co. product"
       >
     </div>
-
 
     <div class="product">
       <img
@@ -256,14 +219,12 @@
       >
     </div>
 
-
     <div class="product">
       <img
         src="9236C828-7B5E-4DB8-8E5C-C72C1357CC5C.png"
         alt="ROAM Co. product"
       >
     </div>
-
 
     <div class="product">
       <img
@@ -272,7 +233,6 @@
       >
     </div>
 
-
     <div class="product">
       <img
         src="FC47C8C6-7260-4357-B3AB-81639DE1E0C9.png"
@@ -280,10 +240,79 @@
       >
     </div>
 
-
   </main>
 
 
-</body>
+  <!--
+    These two filenames are too long to see completely
+    in the GitHub mobile screenshot.
 
+    This automatically finds the files whose names begin
+    with B4A56F71 and EBDDD239 and adds them to the page.
+  -->
+
+  <script>
+
+    async function addLongFilenameImages() {
+
+      try {
+
+        const response = await fetch(
+          'https://api.github.com/repos/lucandlew/roamcogear.com/contents/'
+        );
+
+        const files = await response.json();
+
+        const prefixes = [
+          'B4A56F71-',
+          'EBDDD239-'
+        ];
+
+        const products =
+          document.getElementById('products');
+
+        prefixes.forEach(prefix => {
+
+          const file = files.find(item =>
+            item.type === 'file' &&
+            item.name.startsWith(prefix)
+          );
+
+          if (file) {
+
+            const product =
+              document.createElement('div');
+
+            product.className = 'product';
+
+            const image =
+              document.createElement('img');
+
+            image.src = file.name;
+            image.alt = 'ROAM Co. product';
+
+            product.appendChild(image);
+            products.appendChild(product);
+
+          }
+
+        });
+
+      }
+
+      catch (error) {
+
+        console.log(
+          'Could not load additional ROAM images.'
+        );
+
+      }
+
+    }
+
+    addLongFilenameImages();
+
+  </script>
+
+</body>
 </html>
