@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSWZ7DDNLM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,76 +14,171 @@
 
   gtag('config', 'G-RSWZ7DDNLM');
 </script>
-  <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROAM Co. | Coming Soon</title>
-
-  <meta name="description" content="ROAM Co. — Made to Roam">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-      background: #000;
     }
 
     body {
-      min-height: 100vh;
-      overflow: hidden;
+      background: #050505;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero {
+      min-height: 55vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-    }
-
-    .coming-soon {
-      width: 100%;
+      justify-content: center;
       text-align: center;
-      transform: translateY(-100px);
+      padding: 60px 20px 40px;
     }
 
     .logo {
-      display: block;
-      width: min(90vw, 900px);
+      width: min(520px, 82vw);
       height: auto;
-      margin: 0 auto;
+      margin-bottom: 22px;
     }
 
-    .coming-soon p {
-      margin-top: 30px;
-      color: #d6aa4c;
-      font-family: Arial, sans-serif;
-      font-size: clamp(16px, 2.5vw, 26px);
-      letter-spacing: 12px;
-      padding-left: 12px;
+    .coming-soon {
+      font-size: clamp(22px, 4vw, 42px);
+      font-weight: 600;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+    }
 
-      /* Moves ONLY "COMING SOON" higher */
-      transform: translateY(-200px);
+    .products {
+      width: min(1250px, 94%);
+      margin: 0 auto;
+      padding: 20px 0 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .product {
+      background: #0c0c0c;
+      border-radius: 6px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .hero {
+        min-height: 45vh;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .products {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 96%;
+      }
+
+      .coming-soon {
+        letter-spacing: 5px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="coming-soon">
+  <section class="hero">
+    <img src="images/roam-logo.png" alt="ROAM Co." class="logo">
+    <div class="coming-soon">Coming Soon</div>
+  </section>
 
-    <img
-      class="logo"
-      src="IMG_5076.png"
-      alt="ROAM Co."
-    >
+  <section class="products">
 
-    <p>COMING SOON</p>
+    <!-- Shorts -->
+    <div class="product">
+      <img src="images/shorts-black.jpg" alt="ROAM Co. Black Shorts">
+    </div>
 
-  </div>
+    <div class="product">
+      <img src="images/shorts-camo.jpg" alt="ROAM Co. Camo Shorts">
+    </div>
+
+    <div class="product">
+      <img src="images/shorts-tan.jpg" alt="ROAM Co. Tan Shorts">
+    </div>
+
+    <div class="product">
+      <img src="images/shorts-black-camo.jpg" alt="ROAM Co. Dark Camo Shorts">
+    </div>
+
+    <!-- Sweatpants -->
+    <div class="product">
+      <img src="images/sweatpants-black.jpg" alt="ROAM Co. Black Sweatpants">
+    </div>
+
+    <!-- Hoodie -->
+    <div class="product">
+      <img src="images/hoodie-black.jpg" alt="ROAM Co. Black Hoodie">
+    </div>
+
+    <!-- Polo -->
+    <div class="product">
+      <img src="images/polo-camo.jpg" alt="ROAM Co. Camo Polo">
+    </div>
+
+    <!-- Long Sleeve -->
+    <div class="product">
+      <img src="images/long-sleeve-camo.jpg" alt="ROAM Co. Camo Long Sleeve">
+    </div>
+
+    <!-- Short Sleeve -->
+    <div class="product">
+      <img src="images/short-sleeve-camo.jpg" alt="ROAM Co. Camo Short Sleeve">
+    </div>
+
+    <!-- Black Hat -->
+    <div class="product">
+      <img src="images/hat-black-gold.jpg" alt="ROAM Co. Black Hat">
+    </div>
+
+    <!-- Black / Brown Hat -->
+    <div class="product">
+      <img src="images/hat-black-brown.jpg" alt="ROAM Co. Black and Brown Hat">
+    </div>
+
+    <!-- Full Camo Hat -->
+    <div class="product">
+      <img src="images/hat-camo.jpg" alt="ROAM Co. Camo Hat">
+    </div>
+
+    <!-- Black / Camo Hat -->
+    <div class="product">
+      <img src="images/hat-black-camo.jpg" alt="ROAM Co. Black and Camo Hat">
+    </div>
+
+  </section>
 
 </body>
 </html>
