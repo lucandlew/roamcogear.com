@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <!-- Google Analytics -->
@@ -13,15 +12,11 @@
   </script>
 
   <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>ROAM Co. | Coming Soon</title>
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -31,6 +26,7 @@
     html,
     body {
       width: 100%;
+      min-height: 100%;
       background: #000;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
@@ -40,235 +36,106 @@
       overflow-x: hidden;
     }
 
-
-    /* =========================
-       HEADER
-       ========================= */
+    /* HEADER */
 
     .hero {
       width: 100%;
+      padding: 28px 16px 24px;
       text-align: center;
-      padding: 28px 14px 26px;
     }
 
-    .logo-frame {
-      width: 94vw;
-      max-width: 620px;
-      height: 135px;
+    .logo-wrap {
+      width: min(620px, 90vw);
       margin: 0 auto;
-      position: relative;
-      overflow: hidden;
     }
 
-    .logo-frame img {
-      position: absolute;
+    .logo-wrap img {
       width: 100%;
       height: auto;
-
-      left: 50%;
-      top: 50%;
-
-      transform:
-        translate(-50%, -50%)
-        scale(1.18);
-
       display: block;
     }
 
     .coming-soon {
-      margin-top: 16px;
-
+      margin-top: 18px;
       font-size: 26px;
-      line-height: 1;
-
       font-weight: 700;
-      letter-spacing: 7px;
-
-      white-space: nowrap;
+      letter-spacing: 8px;
+      line-height: 1;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
-
-    /* =========================
-       PRODUCTS
-       ========================= */
+    /* PRODUCTS */
 
     .products {
-      width: 100%;
-      max-width: 900px;
-
+      width: min(760px, 100%);
       margin: 0 auto;
-
-      padding:
-        18px
-        14px
-        60px;
-
+      padding: 18px 14px 55px;
       display: flex;
       flex-direction: column;
-
-      gap: 16px;
+      gap: 14px;
     }
 
     .product {
       width: 100%;
-
-      height: 360px;
-
-      overflow: hidden;
-
-      position: relative;
-
       background: #000;
+      overflow: hidden;
+      border-radius: 2px;
     }
 
     .product img {
-      position: absolute;
-
       width: 100%;
-      height: 100%;
-
-      left: 0;
-      top: 0;
-
-      object-fit: cover;
-      object-position: center;
-
+      height: auto;
       display: block;
     }
 
-
-    /* =========================
-       DIFFERENT IMAGE CROPS
-       ========================= */
-
-    .wide img {
-      object-fit: cover;
-      transform: scale(1.05);
-    }
-
-    .tall img {
-      object-fit: cover;
-      transform: scale(1.08);
-    }
-
-    .tight img {
-      object-fit: cover;
-      transform: scale(1.15);
-    }
-
-
-    /* =========================
-       PHONE
-       ========================= */
+    /* PHONE */
 
     @media (max-width: 700px) {
-
       .hero {
-        padding-top: 22px;
-        padding-bottom: 20px;
+        padding: 20px 14px 18px;
       }
 
-      .logo-frame {
-        width: 94vw;
-        height: 120px;
-      }
-
-      .logo-frame img {
-        transform:
-          translate(-50%, -50%)
-          scale(1.16);
+      .logo-wrap {
+        width: 88vw;
       }
 
       .coming-soon {
-        margin-top: 13px;
-
-        font-size: 25px;
-        letter-spacing: 7px;
-      }
-
-      .products {
-        padding:
-          14px
-          14px
-          50px;
-
-        gap: 14px;
-      }
-
-      .product {
-        height: 330px;
-      }
-
-    }
-
-
-    /* =========================
-       SMALL PHONES
-       ========================= */
-
-    @media (max-width: 430px) {
-
-      .logo-frame {
-        height: 105px;
-      }
-
-      .coming-soon {
-        font-size: 23px;
+        margin-top: 14px;
+        font-size: 24px;
         letter-spacing: 6px;
       }
 
-      .product {
-        height: 300px;
+      .products {
+        padding: 12px 12px 45px;
+        gap: 10px;
       }
-
     }
 
-
-    /* =========================
-       DESKTOP
-       ========================= */
+    /* DESKTOP */
 
     @media (min-width: 850px) {
-
       .products {
+        width: min(1100px, 94%);
         display: grid;
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
-        gap: 18px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
       }
-
-      .product {
-        height: 400px;
-      }
-
     }
-
   </style>
 
 </head>
 
-
 <body>
-
-
-  <!-- =========================
-       LOGO
-       ========================= -->
 
   <header class="hero">
 
-    <div class="logo-frame">
-
+    <div class="logo-wrap">
       <img
         src="IMG_5076.png"
         alt="ROAM Co."
       >
-
     </div>
-
 
     <div class="coming-soon">
       Coming Soon
@@ -276,106 +143,72 @@
 
   </header>
 
-
-
-  <!-- =========================
-       PRODUCTS
-       ========================= -->
-
   <main class="products">
 
-
-    <div class="product wide">
+    <div class="product">
       <img
         src="IMG_5213.jpeg"
         alt="ROAM Co. product"
       >
     </div>
 
-
-    <div class="product tall">
+    <div class="product">
       <img
-        src="IMG_5214.png"
+        src="IMG_5214.jpeg"
         alt="ROAM Co. product"
       >
     </div>
 
-
-    <div class="product tall">
+    <div class="product">
       <img
-        src="IMG_5215.png"
+        src="IMG_5215.jpeg"
         alt="ROAM Co. product"
       >
     </div>
 
-
-    <div class="product wide">
+    <div class="product">
       <img
         src="IMG_5216.png"
         alt="ROAM Co. product"
       >
     </div>
 
-
-    <div class="product tight">
+    <div class="product">
       <img
         src="068E0137-1D3C-4CD9-BDE9-DC3684E110B1.png"
         alt="ROAM Co. product"
       >
     </div>
 
-
-    <div class="product tight">
+    <div class="product">
       <img
         src="33EEDDEB-FBA2-4636-9580-566C57707885.jpeg"
         alt="ROAM Co. product"
       >
     </div>
 
-
-    <div class="product wide">
-      <img
-        src="6FE4223F-76B1-475B-9081-505D08A5507B.png"
-        alt="ROAM Co. product"
-      >
-    </div>
-
-
-    <div class="product wide">
-      <img
-        src="78C88BE9-FDF3-4576-9C0F-B4BAAE52B465.png"
-        alt="ROAM Co. product"
-      >
-    </div>
-
-
-    <div class="product wide">
+    <div class="product">
       <img
         src="9236C828-7B5E-4DB8-8E5C-C72C1357CC5C.png"
         alt="ROAM Co. product"
       >
     </div>
 
-
-    <div class="product wide">
+    <div class="product">
       <img
         src="BDDD0CE5-3C6F-4F0D-9A8D-901DD5D689CC.jpeg"
         alt="ROAM Co. product"
       >
     </div>
 
-
-    <div class="product wide">
+    <div class="product">
       <img
         src="FC47C8C6-7260-4357-B3AB-81639DE1E0C9.png"
         alt="ROAM Co. product"
       >
     </div>
 
-
   </main>
 
-
 </body>
-
 </html>
