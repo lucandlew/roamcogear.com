@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Google Analytics -->
@@ -17,6 +18,7 @@
   <title>ROAM Co. | Coming Soon</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -25,153 +27,338 @@
 
     html,
     body {
+      width: 100%;
+      min-height: 100%;
       background: #000;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
-      width: 100%;
     }
 
     body {
-      min-height: 100vh;
       overflow-x: hidden;
     }
 
+
+    /* =========================
+       TOP / LOGO
+       ========================= */
+
     .hero {
       width: 100%;
+      padding: 35px 15px 28px;
       text-align: center;
-      padding: 34px 16px 20px;
+    }
+
+    .logo-window {
+      width: min(650px, 94vw);
+      height: 145px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
     }
 
     .logo {
-      display: block;
-      width: min(540px, 84vw);
+      position: absolute;
+
+      width: 100%;
       height: auto;
-      margin: 0 auto 14px;
+
+      left: 50%;
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%)
+        scale(1.05);
+
+      display: block;
     }
 
     .coming-soon {
-      font-size: clamp(24px, 5vw, 38px);
+      margin-top: 20px;
+
+      font-size: clamp(24px, 6vw, 38px);
       font-weight: 700;
-      letter-spacing: 9px;
-      text-transform: uppercase;
+
+      letter-spacing: 8px;
       line-height: 1;
+
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
+
+    /* =========================
+       PRODUCTS
+       ========================= */
+
     .products {
-      width: 100%;
-      max-width: 1000px;
+      width: min(1000px, 100%);
+
       margin: 0 auto;
-      padding: 8px 10px 50px;
+
+      padding:
+        18px
+        12px
+        60px;
     }
 
     .product {
       width: 100%;
-      margin: 0 auto 10px;
-      overflow: hidden;
+
+      margin-bottom: 14px;
+
       background: #000;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow: hidden;
     }
 
     .product img {
       display: block;
+
       width: 100%;
       height: auto;
-      margin: 0 auto;
+
+      object-fit: contain;
     }
 
-    @media (min-width: 700px) {
+
+    /* =========================
+       DESKTOP
+       ========================= */
+
+    @media (min-width: 800px) {
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .logo-window {
+        width: 600px;
+        height: 150px;
+      }
+
+      .coming-soon {
+        margin-top: 25px;
+      }
+
       .products {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        gap: 18px;
+
+        padding-top: 25px;
       }
 
       .product {
         margin: 0;
       }
+
     }
 
-    @media (max-width: 699px) {
+
+    /* =========================
+       PHONE
+       ========================= */
+
+    @media (max-width: 799px) {
+
       .hero {
-        padding-top: 24px;
-        padding-bottom: 14px;
+        padding:
+          25px
+          10px
+          18px;
+      }
+
+      .logo-window {
+        width: 94vw;
+        height: 115px;
       }
 
       .logo {
-        width: 86vw;
-        margin-bottom: 10px;
+        transform:
+          translate(-50%, -50%)
+          scale(1.08);
       }
 
       .coming-soon {
+        margin-top: 14px;
+
         font-size: 25px;
+
         letter-spacing: 7px;
       }
 
       .products {
-        padding-top: 6px;
+        padding:
+          14px
+          10px
+          50px;
       }
 
       .product {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
       }
+
     }
+
   </style>
 
 </head>
 
+
 <body>
 
-  <section class="hero">
-    <img class="logo" src="IMG_5076.png" alt="ROAM Co.">
-    <div class="coming-soon">Coming Soon</div>
-  </section>
 
-  <section class="products">
+  <!-- =========================
+       ROAM CO.
+       ========================= -->
 
-    <div class="product">
-      <img src="IMG_5213.jpeg" alt="ROAM Co. product">
+  <header class="hero">
+
+    <div class="logo-window">
+
+      <img
+        class="logo"
+        src="IMG_5076.png"
+        alt="ROAM Co."
+      >
+
     </div>
 
-    <div class="product">
-      <img src="IMG_5214.png" alt="ROAM Co. product">
+    <div class="coming-soon">
+      Coming Soon
     </div>
 
-    <div class="product">
-      <img src="IMG_5215.png" alt="ROAM Co. product">
-    </div>
+  </header>
+
+
+  <!-- =========================
+       PRODUCTS
+       ========================= -->
+
+  <main class="products">
+
 
     <div class="product">
-      <img src="IMG_5216.png" alt="ROAM Co. product">
+
+      <img
+        src="IMG_5213.jpeg"
+        alt="ROAM Co. product"
+      >
+
     </div>
+
 
     <div class="product">
-      <img src="068E0137-1D3C-4CD9-BDE9-DC3684E110B1.png" alt="ROAM Co. product">
+
+      <img
+        src="IMG_5214.png"
+        alt="ROAM Co. product"
+      >
+
     </div>
+
 
     <div class="product">
-      <img src="33EEDDEB-FBA2-4636-9580-566C57707885.jpeg" alt="ROAM Co. product">
+
+      <img
+        src="IMG_5215.png"
+        alt="ROAM Co. product"
+      >
+
     </div>
+
 
     <div class="product">
-      <img src="6FE4223F-76B1-475B-9081-505D08A5507B.png" alt="ROAM Co. product">
+
+      <img
+        src="IMG_5216.png"
+        alt="ROAM Co. product"
+      >
+
     </div>
+
 
     <div class="product">
-      <img src="78C88BE9-FDF3-4576-9C0F-B4BAAE52B465.png" alt="ROAM Co. product">
+
+      <img
+        src="068E0137-1D3C-4CD9-BDE9-DC3684E110B1.png"
+        alt="ROAM Co. product"
+      >
+
     </div>
+
 
     <div class="product">
-      <img src="9236C828-7B5E-4DB8-8E5C-C72C1357CC5C.png" alt="ROAM Co. product">
+
+      <img
+        src="33EEDDEB-FBA2-4636-9580-566C57707885.jpeg"
+        alt="ROAM Co. product"
+      >
+
     </div>
+
 
     <div class="product">
-      <img src="BDDD0CE5-3C6F-4F0D-9A8D-901DD5D689CC.jpeg" alt="ROAM Co. product">
+
+      <img
+        src="6FE4223F-76B1-475B-9081-505D08A5507B.png"
+        alt="ROAM Co. product"
+      >
+
     </div>
+
 
     <div class="product">
-      <img src="FC47C8C6-7260-4357-B3AB-81639DE1E0C9.png" alt="ROAM Co. product">
+
+      <img
+        src="78C88BE9-FDF3-4576-9C0F-B4BAAE52B465.png"
+        alt="ROAM Co. product"
+      >
+
     </div>
 
-  </section>
+
+    <div class="product">
+
+      <img
+        src="9236C828-7B5E-4DB8-8E5C-C72C1357CC5C.png"
+        alt="ROAM Co. product"
+      >
+
+    </div>
+
+
+    <div class="product">
+
+      <img
+        src="BDDD0CE5-3C6F-4F0D-9A8D-901DD5D689CC.jpeg"
+        alt="ROAM Co. product"
+      >
+
+    </div>
+
+
+    <div class="product">
+
+      <img
+        src="FC47C8C6-7260-4357-B3AB-81639DE1E0C9.png"
+        alt="ROAM Co. product"
+      >
+
+    </div>
+
+
+  </main>
+
 
 </body>
+
 </html>
