@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSWZ7DDNLM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSWZ7DDNLM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-RSWZ7DDNLM');
-</script>
+    gtag('config', 'G-RSWZ7DDNLM');
+  </script>
+
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ROAM Co. | Coming Soon</title>
-
-  <meta name="description" content="ROAM Co. — Made to Roam">
+  <title>ROAM CO | Coming Soon</title>
 
   <style>
     * {
@@ -25,61 +24,130 @@
       box-sizing: border-box;
     }
 
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-      background: #000;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
+      background: #080808;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
       min-height: 100vh;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    }
+
+    /* HEADER */
+    .hero {
+      width: 100%;
+      text-align: center;
+      padding: 45px 20px 30px;
+    }
+
+    .brand {
+      font-size: clamp(42px, 10vw, 82px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      line-height: 1;
+      text-transform: uppercase;
     }
 
     .coming-soon {
+      margin-top: 5px;
+      font-size: clamp(14px, 3vw, 22px);
+      font-weight: 500;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: #b9955b;
+    }
+
+    /* PRODUCT AREA */
+    .products {
       width: 100%;
-      text-align: center;
-      transform: translateY(-100px);
-    }
-
-    .logo {
-      display: block;
-      width: min(90vw, 900px);
-      height: auto;
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 10px 18px 60px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }
 
-    .coming-soon p {
-      margin-top: 30px;
-      color: #d6aa4c;
-      font-family: Arial, sans-serif;
-      font-size: clamp(16px, 2.5vw, 26px);
-      letter-spacing: 12px;
-      padding-left: 12px;
+    .product {
+      width: 100%;
+      background: #0d0d0d;
+      overflow: hidden;
+    }
 
-      /* Moves ONLY "COMING SOON" higher */
-      transform: translateY(-200px);
+    .product img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+      .hero {
+        padding: 32px 15px 22px;
+      }
+
+      .brand {
+        font-size: 46px;
+        letter-spacing: 4px;
+      }
+
+      .coming-soon {
+        font-size: 13px;
+        letter-spacing: 6px;
+        margin-top: 4px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 5px 10px 35px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="coming-soon">
+  <header class="hero">
+    <div class="brand">ROAM CO</div>
+    <div class="coming-soon">COMING SOON</div>
+  </header>
 
-    <img
-      class="logo"
-      src="IMG_5076.png"
-      alt="ROAM Co."
-    >
+  <main class="products">
 
-    <p>COMING SOON</p>
+    <div class="product">
+      <img
+        src="33EEDDEB-FBA2-4636-9580-566C57707885.jpeg"
+        alt="ROAM CO Camo Hat"
+      >
+    </div>
 
-  </div>
+    <div class="product">
+      <img
+        src="BDD0DCE5-3C6F-4F0D-9A8D-901DD5D689CC.jpeg"
+        alt="ROAM CO Black Hat"
+      >
+    </div>
+
+    <div class="product">
+      <img
+        src="9236C828-7B5E-4DB8-8E5C-C72C1357CC5C.png"
+        alt="ROAM CO Camo Polo"
+      >
+    </div>
+
+    <div class="product">
+      <img
+        src="IMG_5076.jpeg"
+        alt="ROAM CO Product"
+      >
+    </div>
+
+  </main>
 
 </body>
 </html>
